@@ -1,0 +1,54 @@
+/* --------------------------------------------------
+  _utils.scss
+-------------------------------------------------- */
+// break points
+$mobile: 480px;
+$tablet: 768px;
+$laptop: 1024px;
+$desktop: 1200px;
+$wideDesktop: 1200px;
+
+// colors
+$text: #000;
+$bg: #fff;
+$border: #ddd;
+
+// custom properties
+:root {
+	--bg: #{$bg};
+	--text-primary  : #{lighten($text, 100 - 87%)};
+	--text-secondary: #{lighten($text, 100 - 60%)};
+	--text-tertiary : #{lighten($text, 100 - 38%)};
+	--border: #{$border};
+}
+
+@mixin is-caption {
+  font-size: 0.75rem;
+  letter-spacing: 0.4px;
+}
+
+@mixin is-click-item {
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+@mixin is-link( $priority ) {
+  a,
+  a:active,
+  a:hover,
+  a:visited {
+    text-decoration: none;
+    color: var(--text-#{$priority});
+  }
+
+  p {
+    color: var(--text-#{$priority});
+  }
+}
+
+@mixin like-button {
+  display: inline-block;
+  padding: 0.55em 0.5em 0.5em;
+  background-color: #f5f5f5;
+  line-height: 1;
+}
