@@ -110,7 +110,6 @@ body {
 
       &:nth-of-type(2) {
         body.menu-open & {
-          left: 50%;
           height: 0;
           opacity: 0;
         }
